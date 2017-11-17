@@ -24,7 +24,7 @@ def get_top_books(page):
 	for rows in table_rows:
 		td = rows.find('td',{'valign':'top', 'width':'100%'})
 		book_name = td.find('span').text
-		print(book_name)
+# 		print(book_name)
 		books.append(book_name)
 	with open('book_names.txt',mode='wt',encoding='utf-8') as fp:
 		fp.write('\n'.join(str(book) for book in books)) 
